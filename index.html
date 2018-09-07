@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="vid" loop autoplay muted playsinline><source src="maybeHoriz.better.mp4" type="video/mp4" /></video>
+
+<script>
+  window.addEventListener('orientationchange', function() {
+    if(window.innerHeight > window.innerWidth) {
+        var v = document.getElementById('vid');
+        v.src = 'slide.mp4';
+        v.play();
+    }
+    if(window.innerWidth > window.innerHeight) {
+        var v = document.getElementById('vid');
+        v.src = 'maybeHoriz.better.mp4';
+        v.play();
+    }
+  }, false)
+</script>
+
+</body>
+</html>
